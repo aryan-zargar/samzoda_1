@@ -1,0 +1,47 @@
+{
+  "day": [
+    {
+      "date": "2023-12-30",
+      "active": false,
+      "activity": [],
+      "user": "aryanzargar",
+      "id": 1
+    },
+    {
+      "date": "2024-01-02",
+      "active": true,
+      "activity": [
+        {
+          "activity": "دیگر",
+          "hours": "5"
+        },
+        {
+          "activity": "درس",
+          "hours": "1"
+        },
+        {
+          "activity": "بازی",
+          "hours": "3"
+        },
+        {
+          "activity": "کار",
+          "hours": "1"
+        },
+        {
+          "activity": "غذا و نماز",
+          "hours": "1"
+        }
+      ],
+      "user": "aryanzargar",
+      "id": 2
+    }
+  ],
+  "ToDo": [],
+  "users": [
+    {
+      "username": "aryanzargar",
+      "password": "123456",
+      "id": 1
+    }
+  ]
+}

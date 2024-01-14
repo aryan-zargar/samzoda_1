@@ -4,12 +4,12 @@
       "date": "2023-12-30",
       "active": false,
       "activity": [],
-      "user": "aryanzargar",
+      "user": "admin",
       "id": 1
     },
     {
       "date": "2024-01-02",
-      "active": true,
+      "active": false,
       "activity": [
         {
           "activity": "دیگر",
@@ -32,16 +32,104 @@
           "hours": "1"
         }
       ],
-      "user": "aryanzargar",
+      "user": "admin",
       "id": 2
+    },
+    {
+      "date": "2024-01-04",
+      "active": false,
+      "activity": [
+        {
+          "activity": "استراحت",
+          "hours": "3"
+        }
+      ],
+      "user": "admin",
+      "id": 3
+    },
+    {
+      "date": "2024-01-05",
+      "active": false,
+      "activity": [],
+      "user": "admin",
+      "id": 4
+    },
+    {
+      "date": "2024-01-10",
+      "active": true,
+      "activity": [
+        {
+          "activity": "درس",
+          "hours": "2"
+        },
+        {
+          "activity": "مطالعه",
+          "hours": "3"
+        }
+      ],
+      "user": "test",
+      "id": 5
+    },
+    {
+      "date": "2024-01-13",
+      "active": false,
+      "activity": [
+        {
+          "activity": "بازی",
+          "hours": "3"
+        },
+        {
+          "activity": "تماشای تلویزیون",
+          "hours": "3"
+        },
+        {
+          "activity": "غذا و نماز",
+          "hours": "3"
+        },
+        {
+          "activity": "مطالعه",
+          "hours": "2"
+        },
+        {
+          "activity": "کار",
+          "hours": "2"
+        },
+        {
+          "activity": "درس",
+          "hours": "3"
+        },
+        {
+          "activity": "دیگر",
+          "hours": "2"
+        }
+      ],
+      "user": "admin",
+      "id": 6
+    },
+    {
+      "date": "2024-01-14",
+      "active": true,
+      "activity": [],
+      "user": "admin",
+      "id": 7
     }
   ],
   "ToDo": [],
   "users": [
     {
-      "username": "aryanzargar",
-      "password": "123456",
+      "username": "admin",
+      "password": "admin",
       "id": 1
+    },
+    {
+      "username": "test",
+      "password": "123",
+      "id": 2
+    },
+    {
+      "username": "test1",
+      "password": "test1",
+      "id": 3
     }
   ]
 }

@@ -8,7 +8,7 @@ const ActivityTable = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:8184/day?active=true');
+        const response = await axios.get(`http://localhost:8184/day?active=true&user=${localStorage.username}`);
         const data = response.data[0];
         const l = (response.data[0].date)
         const convertedDate = moment(l, 'YYYY-MM-DD').locale('fa').format('YYYY-MM-DD');

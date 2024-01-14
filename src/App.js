@@ -7,10 +7,9 @@ import {
   Link
 } from "react-router-dom";
 import Home from './components/homepage';
-import TodoList from './components/Todolist';
-import TodoForm from './components/addTodo';
 import AuthComponent from './login';
-import ActivityForm from './components/activityform';
+import Addactivitylist from './components/addactivitylist';
+
 function App() {
   return (
    <div>
@@ -19,17 +18,11 @@ function App() {
         <Route exact path="/">
           <Home/>
         </Route>
-        <Route exact path="/Todo">
-          <TodoList/>
-        </Route>
-        <Route path="/addtodo">
-          <TodoForm></TodoForm>
-        </Route>  
-        <Route path="/auth">
+        <Route exact path="/auth">
           <AuthComponent/>
         </Route>
-        <Route path="/addactivity">
-          <ActivityForm/>
+        <Route exact path="/addactivitylist">
+          <Addactivitylist/>
         </Route>
       </Switch>
     </Router>

@@ -7,6 +7,7 @@ export default function ChartCompo() {
     var [actdata,setactdata] = useState([])
     var [values,setvalues] = useState([])
     var [names,setnames] = useState([])
+    var [load,setload] = useState(true)
     async function fetch(){
         const apiUrl = `http://localhost:8184/day?user=${localStorage.username}`;
         
@@ -35,6 +36,7 @@ export default function ChartCompo() {
         
     }
     async function doIT() {
+        setload(true)
         let newValues = [];
         let newNames = [];
     
@@ -76,6 +78,7 @@ export default function ChartCompo() {
     
         console.log(numlist);
         console.log(newNames);
+        setload(false)
     }
     
     useEffect(() => {
@@ -86,14 +89,20 @@ export default function ChartCompo() {
             clearInterval(intervalId);
             clearInterval(intervalid2)
         }
-      }, []);
+      }, []
+      );
+  if(load == true){
+    return (
+        <h4 className='d-flex justify-content-center' style={{"fontFamily":"cursive"}}>Loading...</h4>
+    )
+  }
   return (
     <table className='table table-bordered table-striped table-dark table-hover'>
         <thead>
             <tr>
                 {names.map(e=>{
                     return(
-                        <th>{e}(درصد)</th>
+                        <th>{e}</th>
                     )
                 })}
             </tr>

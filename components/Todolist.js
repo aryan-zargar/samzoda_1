@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { FaHome } from 'react-icons/fa';
-const TodoListWidget = () => {
+const TodoList = () => {
   const [data, setData] = useState([]);
   const [error, setError] = useState('');
-
   const fetchTodoList = async () => {
     try {
       const username = localStorage.getItem('username');
@@ -62,4 +61,4 @@ const TodoListWidget = () => {
   );
 };
 
-export default TodoListWidget;
+export default TodoList;

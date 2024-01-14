@@ -1,0 +1,9 @@
+#llolk:hover{
+    width: 35px;
+    height: 35px;
+    transition:1s;
+}
+#llolk{
+    width: 30px;
+    height: 30px;
+}

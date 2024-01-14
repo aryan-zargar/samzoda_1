@@ -1,5 +1,6 @@
 import { FaPowerOff } from 'react-icons/fa';
 import { useEffect, useState } from "react";
+import "./style/items.css"
 
 const EndOfDayItem = () => {
     const [getdata, setGetData] = useState(null);
@@ -69,18 +70,39 @@ const EndOfDayItem = () => {
             body: JSON.stringify(newRecord),
           });
         }
+        else{
+          const currentDate = new Date();
+          const formattedCurrentDate = currentDate.toISOString().split('T')[0];
+  
+          const checkResponse = await fetch(`http://localhost:8184/day?date=${formattedCurrentDate}&user=${localStorage.username}`);
+          const existingData = await checkResponse.json();
+          const newRecord = {
+            date: formattedCurrentDate, // Get date without hours
+            active: true,
+            activity: [],
+            user:localStorage.username
+          };
+  
+          await fetch('http://localhost:8184/day/', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(newRecord),
+          });
+        }
       } catch (error) {
         console.error('Error updating/creating data:', error);
       }
       window.location = "../.."
-    };
+    }
   
     return (
-      <div className='d-flex mt-2'>
+      <div id='item' className='d-flex mt-2'>
 
         <FaPowerOff size={40} color='#00ab41' className='p-2' onClick={handleEndOfDay} style={{ cursor: 'pointer' }} />
         <button className='btn btn-hover' onClick={handleEndOfDay}>
-          <span style={{ color: 'whitesmoke', textDecoration: 'none' }}>اتمام روز</span>
+          <span style={{ color: 'whitesmoke', textDecoration: 'none' }}>اتمام/شروع روز</span>
         </button>
       </div>
     );

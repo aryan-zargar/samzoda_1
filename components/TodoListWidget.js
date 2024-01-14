@@ -7,7 +7,7 @@ const TodoListWidget = () => {
 
   const fetchTodoList = async () => {
     try {
-      const username = localStorage.getItem('username');
+      const username = localStorage.username;
       const response = await axios.get(`http://localhost:8184/Todo?user=${username}&active=true`);
       setData(response.data);
     } catch (error) {
@@ -16,7 +16,7 @@ const TodoListWidget = () => {
   };
 
   useEffect(() => {
-    fetchTodoList();
+    fetchTodoList();  
   }, []); // Fetch Todo list on component mount
   function deleterecord(id){
     axios.delete(`http://localhost:8184/Todo/${id}`)

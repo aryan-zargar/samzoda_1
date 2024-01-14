@@ -1,0 +1,8 @@
+#item:hover{
+    padding-left: 8px;
+    transition: 0.4s;
+}
+#item::after:hover{
+    padding-left: -8px;
+    transition: .2s;
+}

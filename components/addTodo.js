@@ -17,6 +17,7 @@ export default function TodoForm() {
       ...formData,
       [name]: name === 'active' ? value === 'true' : value,
     });
+    console.log(formData)
   };
 
   const handleSubmit = async (e) => {

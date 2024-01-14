@@ -16,7 +16,7 @@ const ActivityForm = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:8184/day?active=true');
+        const response = await axios.get(`http://localhost:8184/day?active=true&user=${localStorage.username}`);
         const existingActivityData = response.data || [];
 
         setActivityData(existingActivityData.length > 0 ? existingActivityData[0] : []);
@@ -40,8 +40,26 @@ const ActivityForm = () => {
   // Handler for form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    try {
+    var bbb = false;
+    for (let index = 0; index < (activityData.activity).length; index++) {
+      const element = (activityData.activity)[index];
+      console.log(element)
+      console.log(formData.activity)
+      if (element.activity == formData.activity){
+        var a = activityData.activity;
+        a[index].hours = `${Number(a[index].hours) + Number(formData.hours)}`
+        await axios.patch(`http://localhost:8184/day/${activityData.id}/`, {
+        activity: a,
+        });
+        bbb = true
+        setFormData({
+          activity: 'chill',
+          hours: 0,
+        });
+        window.location="../.."
+      }
+    }
+    if(bbb == false) {
       console.log(activityData);
       const updatedActivityData = [...activityData.activity, { activity: formData.activity, hours: formData.hours }];
 
@@ -59,8 +77,6 @@ const ActivityForm = () => {
       setActivityData(updatedActivityData);
 
       console.log('Activity data updated successfully!');
-    } catch (error) {
-      console.error('Error updating activity data:', error);
     }
   };
 

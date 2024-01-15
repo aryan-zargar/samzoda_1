@@ -9,6 +9,8 @@ import {
 import Home from './components/homepage';
 import AuthComponent from './login';
 import Addactivitylist from './components/addactivitylist';
+import Activitylist from './components/activitylist';
+import Worklist from './components/worklist';
 
 function App() {
   return (
@@ -23,6 +25,12 @@ function App() {
         </Route>
         <Route exact path="/addactivitylist">
           <Addactivitylist/>
+        </Route>
+        <Route exact path="/activitylist">
+          <Activitylist/>
+        </Route>
+        <Route exact path="/worklist">
+          <Worklist/>
         </Route>
       </Switch>
     </Router>

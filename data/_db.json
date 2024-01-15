@@ -1,12 +1,6 @@
 {
   "worklist": [
     {
-      "code": "DRS",
-      "user": "admin",
-      "title": "درس",
-      "id": 1
-    },
-    {
       "code": "MTL",
       "user": "admin",
       "title": "مطالعه",
@@ -19,9 +13,9 @@
       "id": 3
     },
     {
-      "code": "KAR",
+      "code": "kmk",
       "user": "admin",
-      "title": "کار",
+      "title": "کمک",
       "id": 4
     }
   ],
@@ -40,6 +34,28 @@
       "username": "test1",
       "password": "test1",
       "id": 3
+    }
+  ],
+  "work": [
+    {
+      "date": "1402-10-25",
+      "name": "بازی",
+      "prio": "h",
+      "stat": "0",
+      "esti": "1:50:00",
+      "spen": "00:00:00",
+      "user": "admin",
+      "id": 0
+    },
+    {
+      "date": "1402-10-25",
+      "name": "بازی",
+      "prio": "l",
+      "stat": "1",
+      "esti": "1:50:00",
+      "spen": "00:00:00",
+      "user": "admin",
+      "id": 1
     }
   ]
 }

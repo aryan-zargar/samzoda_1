@@ -11,6 +11,7 @@ import AuthComponent from './login';
 import Addactivitylist from './components/addactivitylist';
 import Activitylist from './components/activitylist';
 import Worklist from './components/worklist';
+import Addworklist from './components/addworklist';
 
 function App() {
   return (
@@ -31,6 +32,9 @@ function App() {
         </Route>
         <Route exact path="/worklist">
           <Worklist/>
+        </Route>
+        <Route exact path="/addworklist">
+          <Addworklist/>
         </Route>
       </Switch>
     </Router>

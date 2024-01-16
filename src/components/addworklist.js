@@ -18,6 +18,8 @@ export default function Addworklist() {
             from:e.target.esti.value,
             to:e.target.to.value,
             spen:"00:00:00",
+            frome:"",
+            toe:"",
             user:localStorage.username
         }
         axios.post("http://localhost:8184/work/",data)

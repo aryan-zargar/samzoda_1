@@ -12,6 +12,7 @@ import Addactivitylist from './components/addactivitylist';
 import Activitylist from './components/activitylist';
 import Worklist from './components/worklist';
 import Addworklist from './components/addworklist';
+import Donework from './components/donework';
 
 function App() {
   return (
@@ -35,6 +36,9 @@ function App() {
         </Route>
         <Route exact path="/addworklist">
           <Addworklist/>
+        </Route>
+        <Route exact path="/donework/:id">
+          <Donework/>
         </Route>
       </Switch>
     </Router>

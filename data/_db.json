@@ -49,22 +49,33 @@
     }
   ],
   "work": [
-<<<<<<< HEAD
-    
-=======
     {
       "date": "1402-10-27",
       "title": "آشپزی",
       "prio": "h",
-      "stat": "0",
+      "stat": "1",
       "from": "07:00",
       "to": "08:40",
-      "spen": null,
+      "spen": 1,
       "user": "admin",
-      "frome": "08:30",
-      "toe": "22:30",
+      "frome": "10:00",
+      "toe": "11:00",
+      "done": true,
       "id": 1
+    },
+    {
+      "date": "1402-10-29",
+      "title": "مطالعه",
+      "prio": "l",
+      "stat": "1",
+      "from": "12:00",
+      "to": "13:00",
+      "spen": 1,
+      "frome": "12:00",
+      "toe": "13:00",
+      "done": true,
+      "user": "admin",
+      "id": 2
     }
->>>>>>> a1d6c34266bd49886e317e02deaf7abca3ff3c6a
   ]
 }

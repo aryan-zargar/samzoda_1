@@ -1,6 +1,6 @@
 import React from 'react'
 import LogoutButton from './logout'
-import { FaAccusoft, FaBacon, FaCalendar, FaCalendarAlt, FaCalendarCheck, FaCalendarPlus, FaCalendarTimes, FaClipboardCheck, FaClipboardList, FaCloudDownloadAlt, FaCloudMoon, FaDollyFlatbed, FaEnvelopeOpen, FaEnvelopeOpenText, FaFolder, FaFolderPlus, FaGoogleDrive, FaLiraSign, FaList, FaListOl, FaListUl, FaPaperPlane, FaPlusCircle, FaRegCalendarCheck, FaRegCalendarPlus, FaSearchPlus } from 'react-icons/fa'
+import { FaAccusoft, FaBacon, FaCalendar, FaCalendarAlt, FaCalendarCheck, FaCalendarPlus, FaCalendarTimes, FaChartArea, FaChartBar, FaChartLine, FaChartPie, FaClipboardCheck, FaClipboardList, FaCloudDownloadAlt, FaCloudMoon, FaDollyFlatbed, FaEnvelopeOpen, FaEnvelopeOpenText, FaFolder, FaFolderPlus, FaGoogleDrive, FaLinkedin, FaLiraSign, FaList, FaListOl, FaListUl, FaPaperPlane, FaPlusCircle, FaRegCalendarCheck, FaRegCalendarPlus, FaSearchPlus } from 'react-icons/fa'
 import { Redirect } from 'react-router-dom/cjs/react-router-dom.min'
 import './style/items.css'
 export default function Sidebar() {
@@ -38,7 +38,19 @@ export default function Sidebar() {
                 <button className='btn btn-hover' onClick={(e)=>{window.location="../worklist"}}>
                   <span style={{ color: 'whitesmoke', textDecoration: 'none' }}>برنامه ریزی</span>
                 </button>
+              </div> 
+              <div id='item'  className='d-flex mt-2'>
+                <FaChartBar size={40} color='#00ab41' className='p-2' onClick={()=>{window.location="../weekchart"}} style={{ cursor: 'pointer' }} />
+                <button className='btn btn-hover' onClick={(e)=>{window.location="../weekchart"}}>
+                  <span style={{ color: 'whitesmoke', textDecoration: 'none' }}>گزارش هفته</span>
+                </button>
               </div>  
+              <div id='item'  className='d-flex mt-2'>
+                <FaChartPie size={40} color='#00ab41' className='p-2' onClick={()=>{window.location="../monthchart"}} style={{ cursor: 'pointer' }} />
+                <button className='btn btn-hover' onClick={(e)=>{window.location="../monthchart"}}>
+                  <span style={{ color: 'whitesmoke', textDecoration: 'none' }}>گزارش ماه</span>
+                </button>
+              </div>   
             </div>
           </div>
         </div>

@@ -13,6 +13,8 @@ import Activitylist from './components/activitylist';
 import Worklist from './components/worklist';
 import Addworklist from './components/addworklist';
 import Donework from './components/donework';
+import WeekChart from './components/weekchart';
+import MonthChart from './components/monthchart';
 
 function App() {
   return (
@@ -39,6 +41,12 @@ function App() {
         </Route>
         <Route exact path="/donework/:id">
           <Donework/>
+        </Route>
+        <Route exact path="/weekchart">
+          <WeekChart/>
+        </Route>
+        <Route exact path="/monthchart">
+          <MonthChart/>
         </Route>
       </Switch>
     </Router>

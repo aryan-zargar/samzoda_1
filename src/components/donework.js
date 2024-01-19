@@ -7,17 +7,36 @@ export default function Donework() {
     let { id } = useParams();
     function handlesubmit(e){
         e.preventDefault();
+        var a = e.target.esti.value
+        var b = e.target.to.value
+        var ab = Number(a.split(":")[0])
+        var ac = Number(a.split(":")[1])
+        var bb = Number(b.split(":")[0])
+        var bc = Number(b.split(":")[1])
+        if(bb == 0){
+            bb = 12
+        }
+        if(ab == 0){
+            ab = 12
+        }
+            var c = bb-ab
+        if(ac >= 30){
+            c = c-1
+        }
+        if (bc >= 30){
+            c = c+1
+        }
         axios.patch(`http://localhost:8184/work/${id}`,{
             frome:e.target.esti.value,
             toe:e.target.to.value,
-            spen:Math.abs(e.target.esti.value - e.target.to.value)
+            spen:c,
+            done:true,
+            stat:"1"
         })
         .catch(err=>{
             alert(err)
             window.location = "../worklist"
         })
-
-        alert("succeess")
         window.location= "../worklist"
     }
   return (

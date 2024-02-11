@@ -44,7 +44,7 @@ export default function Addworklist() {
                 <form onSubmit={(e)=>{handlesubmit(e)}} className='w-75 form-group d-flex justify-content-center' style={{"border":"0px solid black",borderRadius:"20px",marginTop:"25px","direction":"rtl","fontSize":"large","paddingTop":"2rem"}}>
                     <div className='p-4 w-100'>
                         <div className='d-flex justify-content-center pb-3'>
-                            <h2 style={{"color":"#00ab41"}}>ثبت لیست برنامه </h2>
+                            <h2 style={{"color":"#00ab41"}}>ثبت برنامه ریزی جدید </h2>
                         </div>
                         <div className='d-flex'>
                             <div className='mt-3 float-start p-2 w-50'>

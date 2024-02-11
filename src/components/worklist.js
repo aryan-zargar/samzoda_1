@@ -22,8 +22,13 @@ export default function Worklist() {
         setd(res.data)
     }
     async function handlechange(w){
-        var res = await axios.get(`http://localhost:8184/work?user=${localStorage.username}&title=${w}`)
-        setdata(res.data)
+        if (w != ""){
+            var res = await axios.get(`http://localhost:8184/work?user=${localStorage.username}&title=${w}`)
+        }
+        else{
+            var res = await axios.get(`http://localhost:8184/work?user=${localStorage.username}`)
+        }
+            setdata(res.data)
     }
     useEffect(()=>{
         fetchWorkList();
@@ -35,18 +40,18 @@ export default function Worklist() {
         <Sidebar/>
     <div className='col-md-8 ps-3 pe-3 mt-3 pt-5' style={{"border":"solid 1px white",borderRadius:"9px"}}>
     <div className='mt-1'>
-                <button className='btn btn-secondary ' style={{"borderRadius":"25px" , fontSize:"large",fontWeight:""}} onClick={()=>window.location="../../addactivitylist"}>اضافه کردن +</button>
+                <button className='btn btn-secondary ' style={{"borderRadius":"25px" , fontSize:"large",fontWeight:""}} onClick={()=>window.location="../../addworklist"}>اضافه کردن +</button>
     </div>
         <label className='float-end text-light mt-1'>جستجو و کار</label>
         <select onChange={(e)=>handlechange(e.target.value)}  name='code' id='code' className='form-select bg-dark border border-light text-light bg-dark'>
-            <option>---</option>
+            <option value={""}>---</option>
             {d.map(e=>{
                 return(
                     <option value={e.title}>{e.title}</option>
                 )
             })}
         </select>      
-        <table className='table table-bordered table-hover table-dark table-striped mt-1'>
+        <table className='table table-bordered table-hover table-dark table-striped mt-1 w-100'>
         <thead>
             <tr>
                 <th style={{"textAlign":"center"}}>تاریخ</th>
@@ -91,8 +96,8 @@ export default function Worklist() {
                         <td style={{"textAlign":"center"}}>{e.frome}</td>
                         <td style={{"textAlign":"center"}}>{e.toe}</td>
                         <td style={{"textAlign":"center"}}>{e.spen}</td>
-                        <td style={{"textAlign":"center"}}><button onClick={()=>{handledelete(e.id)}} className='btn btn-danger'>حذف</button></td>
-                        <td style={{"textAlign":"center"}}><button disabled={e.done} onClick={()=>{window.location=`../donework/${e.id}`}} className='btn btn-success'>انجام</button></td>
+                        <td style={{"textAlign":"center"}}><button onClick={()=>{handledelete(e.id)}} className='btn btn-danger'>-</button></td>
+                        <td style={{"textAlign":"center"}}><button disabled={e.done} onClick={()=>{window.location=`../donework/${e.id}`}} className='btn btn-success'>✅</button></td>
                     </tr>
                 )
             })}

@@ -15,6 +15,7 @@ import Addworklist from './components/addworklist';
 import Donework from './components/donework';
 import WeekChart from './components/weekchart';
 import MonthChart from './components/monthchart';
+import Prf from './components/prf';
 
 function App() {
   return (
@@ -47,6 +48,9 @@ function App() {
         </Route>
         <Route exact path="/monthchart">
           <MonthChart/>
+        </Route>
+        <Route exact path="/profile">
+            <Prf/>
         </Route>
       </Switch>
     </Router>

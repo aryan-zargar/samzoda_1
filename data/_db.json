@@ -29,6 +29,24 @@
       "user": "admin",
       "title": "برنامه نویسی",
       "id": 6
+    },
+    {
+      "code": "VRZSH",
+      "user": "admin",
+      "title": "ورزش",
+      "id": 7
+    },
+    {
+      "code": "ASHPZ",
+      "user": "raziehrahmatipour",
+      "title": "آشپزی",
+      "id": 8
+    },
+    {
+      "code": "BRN",
+      "user": "raziehrahmatipour",
+      "title": "برنامه نویسی",
+      "id": 9
     }
   ],
   "users": [
@@ -46,11 +64,16 @@
       "username": "test1",
       "password": "test1",
       "id": 3
+    },
+    {
+      "username": "raziehrahmatipour",
+      "password": "12345",
+      "id": 4
     }
   ],
   "work": [
     {
-      "date": "1402-10-27",
+      "date": "1402-10-29",
       "title": "آشپزی",
       "prio": "h",
       "stat": "1",
@@ -64,7 +87,7 @@
       "id": 1
     },
     {
-      "date": "1402-10-29",
+      "date": "1402-10-27",
       "title": "مطالعه",
       "prio": "l",
       "stat": "1",
@@ -76,6 +99,48 @@
       "done": true,
       "user": "admin",
       "id": 2
+    },
+    {
+      "date": "1402-10-22",
+      "title": "ورزش",
+      "prio": "l",
+      "stat": "1",
+      "from": "14:30",
+      "to": "15:00",
+      "spen": 1,
+      "frome": "15:20",
+      "toe": "16:10",
+      "done": true,
+      "user": "admin",
+      "id": 3
+    },
+    {
+      "date": "1402-11-22",
+      "title": "آشپزی",
+      "prio": "l",
+      "stat": "1",
+      "from": "13:00",
+      "to": "15:45",
+      "spen": 3,
+      "frome": "13:20",
+      "toe": "15:40",
+      "done": true,
+      "user": "raziehrahmatipour",
+      "id": 4
+    },
+    {
+      "date": "1402-9-1",
+      "title": "برنامه نویسی",
+      "prio": "h",
+      "stat": "1",
+      "from": "05:50",
+      "to": "15:45",
+      "spen": 9,
+      "frome": "07:45",
+      "toe": "16:45",
+      "done": true,
+      "user": "raziehrahmatipour",
+      "id": 5
     }
   ]
 }
